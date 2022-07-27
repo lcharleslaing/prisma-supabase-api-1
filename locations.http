@@ -1,0 +1,76 @@
+
+### GET CITIES
+GET http://localhost:3000/api/city
+
+### GET COUNTIES
+GET http://localhost:3000/api/county
+
+### GET STATES
+GET http://localhost:3000/api/state
+
+### GET CITY BY ID
+GET http://localhost:3000/api/city/3
+
+### DELETE CITY BY ID
+DELETE http://localhost:3000/api/city/3
+
+### DELETE COUNTY BY ID
+DELETE http://localhost:3000/api/county/1
+
+### DELETE STATE BY ID
+DELETE http://localhost:3000/api/state/3
+
+### POST NEW CITY
+POST http://localhost:3000/api/city
+Content-Type: application/json
+
+{
+    "name": "Eaton Rapids",
+    "countyId": 1,
+    "stateId": 1
+}
+
+### POST NEW COUNTY
+POST http://localhost:3000/api/county
+Content-Type: application/json
+
+{
+    "name": "Clinton",
+    "stateId": 1
+}
+
+### POST NEW STATE
+POST http://localhost:3000/api/state
+Content-Type: application/json
+
+{
+    "name": "Arizona"
+}
+
+
+### UPDATE CITY
+PATCH  http://localhost:3000/api/city/2
+Content-Type: application/json
+
+{
+    "name": "Eaton Rapids",
+    "countyId": 1,
+    "stateId": 1
+}
+
+### UPDATE COUNTY
+PATCH  http://localhost:3000/api/county/2
+Content-Type: application/json
+
+{
+    "name": "Ingham",
+    "stateId": 1
+}
+
+### UPDATE COUNTY
+PATCH  http://localhost:3000/api/state/2
+Content-Type: application/json
+
+{
+    "name": "Texas"
+}

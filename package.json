@@ -1,0 +1,30 @@
+{
+  "name": "prisma-supabase-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "migrate": "pnpx prisma migrate dev",
+    "push": "pnpx prisma db push",
+    "pull": "pnpx prisma db pull",
+    "generate": "pnpx prisma generate",
+    "studio": "pnpx prisma studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^4.1.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19",
+    "prisma": "^4.1.0",
+    "@supabase/supabase-js": "^1.8.0"
+  }
+}
