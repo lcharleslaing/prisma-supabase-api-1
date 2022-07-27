@@ -12,31 +12,31 @@ datasource db {
 }
 
 model State {
-  id         Int      @id @default(autoincrement())
-  created_at DateTime @default(now())
-  updated_at DateTime @updatedAt
-  name       String   @unique
+  id         Int       @id @default(autoincrement())
+  created_at DateTime? @default(now())
+  updated_at DateTime? @updatedAt
+  name       String?   @unique
   cities     City[]
   counties   County[]
 }
 
 model County {
-  id         Int      @id @default(autoincrement())
-  created_at DateTime @default(now())
-  updated_at DateTime @updatedAt
-  name       String
+  id         Int       @id @default(autoincrement())
+  created_at DateTime? @default(now())
+  updated_at DateTime? @updatedAt
+  name       String?
   cities     City[]
-  State      State?   @relation(fields: [stateId], references: [id])
+  State      State?    @relation(fields: [stateId], references: [id])
   stateId    Int?
 }
 
 model City {
-  id         Int      @id @default(autoincrement())
-  created_at DateTime @default(now())
-  updated_at DateTime @updatedAt
+  id         Int       @id @default(autoincrement())
+  created_at DateTime? @default(now())
+  updated_at DateTime? @updatedAt
   name       String
-  county     County   @relation(fields: [countyId], references: [id])
-  countyId   Int
-  State      State?   @relation(fields: [stateId], references: [id])
+  county     County?   @relation(fields: [countyId], references: [id])
+  countyId   Int?
+  State      State?    @relation(fields: [stateId], references: [id])
   stateId    Int?
 }

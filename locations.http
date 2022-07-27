@@ -1,6 +1,6 @@
 
 ### GET CITIES
-GET http://localhost:3000/api/city
+GET https://prisma-supabase-api.vercel.app/api
 
 ### GET COUNTIES
 GET http://localhost:3000/api/county
